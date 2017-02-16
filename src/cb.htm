@@ -6,11 +6,11 @@
 <BODY BGCOLOR="white">
 <script language="JavaScript">
 <!-- 
-var validateForm = function (form) {
+var validate_form = function (form) {
     if (form.YNO.value === "")
         return "郵便番号を入力してください";
 
-    if (form.YNO.value.length != 7)
+    if (form.YNO.value.length !== 7)
         return "郵便番号には、半角数字７桁で入力してください。";
 
     if (!(/^\d{7}$/.test(form.YNO.value)))
@@ -166,7 +166,7 @@ var format_html = function(postal_code, serial_number, barcode, big, shows_table
 
 var main = function() {
     var form = document.CBFORM;
-    var error = validateForm(form);
+    var error = validate_form(form);
     if (error !== null) {
         alert(error);
         return;
