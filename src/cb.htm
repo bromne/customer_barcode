@@ -99,14 +99,14 @@ var configure_barcode = function(characters) {
     if (barcode.length !== 23)
         throw new Error();
     return barcode;
-}
+};
 
 var image_element = function(name, big) {
     if (big)
         return '<img src="' + name + '" width="18" height="18">';
     else
         return '<img src="' + name + '">';
-}
+};
 
 var format_html = function(postal_code, serial_number, barcode, big, shows_table) {
     var map_and_join = function(mapper) {
@@ -162,7 +162,7 @@ var format_html = function(postal_code, serial_number, barcode, big, shows_table
         + "</BODY>"
         + "</HTML>";
     return html;
-}
+};
 
 var main = function() {
     var form = document.CBFORM;
